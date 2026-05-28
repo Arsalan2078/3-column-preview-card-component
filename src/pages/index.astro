@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 const carClasses = await getCollection("carClasses");
+import "../styles/globals.scss";
 ---
 
 <html lang="en">
@@ -11,7 +12,7 @@ const carClasses = await getCollection("carClasses");
     <meta name="generator" content={Astro.generator} />
     <title>Frontend Mentor | 3-column preview card component</title>
   </head>
-  <body>
+  <body class={`text-preset-2`}>
     <header>
       <h1>3-column preview card component</h1>
     </header>
@@ -22,7 +23,7 @@ const carClasses = await getCollection("carClasses");
           carClasses.map(({ data }) => (
             <li>
               <img src={data.icon} alt="" />
-              <h2>{data.heading}</h2>
+              <h2 class="text-preset-1">{data.heading}</h2>
               <p>{data.paragraph}</p>
               <a href={data.link}>Learn More</a>
             </li>

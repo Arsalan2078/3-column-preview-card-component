@@ -1,0 +1,16 @@
+@layer {
+  .text-preset-1 {
+    font-family: var(--ff-big-shoulders);
+    font-weight: var(--fw-700);
+    font-size: var(--fs-40);
+    line-height: var(--lh-120);
+    letter-spacing: var(--ls-0);
+  }
+  .text-preset-2 {
+    font-family: var(--ff-lexend-deca);
+    font-weight: var(--fw-400);
+    font-size: var(--fs-15);
+    line-height: var(--lh-165);
+    letter-spacing: var(--ls-0);
+  }
+}
