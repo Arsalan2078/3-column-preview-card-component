@@ -5,7 +5,7 @@ import { file } from "astro/loaders";
 const carClasses = defineCollection({
   loader: file("src/data/car-classes.json"),
   schema: z.object({
-    id: z.string(),
+    id: z.number(),
     heading: z.string(),
     paragraph: z.string(),
     link: z.string(),

@@ -1,7 +1,7 @@
 ---
-import { getCollection } from "astro:content";
-const carClasses = await getCollection("carClasses");
+import CarClasses from "../components/CarClasses.astro";
 import "../styles/globals.scss";
+import css from "./index.module.scss"
 ---
 
 <html lang="en">
@@ -12,24 +12,13 @@ import "../styles/globals.scss";
     <meta name="generator" content={Astro.generator} />
     <title>Frontend Mentor | 3-column preview card component</title>
   </head>
-  <body class={`text-preset-2`}>
-    <header>
+  <body class={`${css.body} text-preset-2`}>
+    <header class={css.header}>
       <h1>3-column preview card component</h1>
     </header>
 
-    <main>
-      <ul>
-        {
-          carClasses.map(({ data }) => (
-            <li>
-              <img src={data.icon} alt="" />
-              <h2 class="text-preset-1">{data.heading}</h2>
-              <p>{data.paragraph}</p>
-              <a href={data.link}>Learn More</a>
-            </li>
-          ))
-        }
-      </ul>
+    <main class={css.main}>
+      <CarClasses />
     </main>
   </body>
 </html>

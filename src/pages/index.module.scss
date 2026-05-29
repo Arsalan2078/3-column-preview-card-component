@@ -1,0 +1,23 @@
+@use "../styles/abstracts/z-index" as abs;
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  padding-block: abs.to-rem(88px);
+  padding-inline: abs.get-clamp(24px, 80px, abs.$bp-sm, abs.$bp-md);
+}
+.header {
+  display: none;
+}
+.main {
+  margin: 0 auto;
+  width: min(100%, 921px);
+}
+
+@media screen and (min-width: #{abs.$bp-md}) {
+  .body {
+    padding-inline: abs.get-clamp(80px, 259px, abs.$bp-md, abs.$bp-lg);
+  }
+}

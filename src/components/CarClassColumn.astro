@@ -1,0 +1,15 @@
+---
+import css from "./CarClassColumn.module.scss";
+const { id, heading, paragraph, link, icon } = Astro.props;
+---
+
+<div class={css.column} data-carClass={id}>
+  <img src={icon} alt="" class={css.icon} />
+  <div>
+    <div>
+      <h2 class={`${css.heading} text-preset-1`}>{heading}</h2>
+      <p class={css.paragraph}>{paragraph}</p>
+    </div>
+    <a href={link} class={css.link}>Learn More</a>
+  </div>
+</div>
