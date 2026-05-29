@@ -1,17 +1,24 @@
 ---
-
+import CarClasses from "../components/CarClasses.astro";
+import "../styles/globals.scss";
+import css from "./index.module.scss"
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Frontend Mentor | 3-column preview card component</title>
   </head>
-  <body>
-    <h1>Astro</h1>
+  <body class={`${css.body} text-preset-2`}>
+    <header class={css.header}>
+      <h1>3-column preview card component</h1>
+    </header>
+
+    <main class={css.main}>
+      <CarClasses />
+    </main>
   </body>
 </html>

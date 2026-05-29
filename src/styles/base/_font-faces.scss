@@ -1,0 +1,26 @@
+/***
+  google-webfonts-helper: A Hassle-Free Way to Self-Host Google Fonts
+  Web page: https://gwfh.mranftl.com/fonts
+***/
+
+@font-face {
+  font-display: swap;
+  font-family: "Big Shoulders";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local("Big Shoulders"),
+    local("Big-Shoulders"),
+    url("/fonts/Big Shoulders/big-shoulders-v4-latin-700.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Lexend Deca";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("Lexend Deca"),
+    local("Lexend-Deca"),
+    url("/fonts/Lexend Deca/lexend-deca-v25-latin-regular.woff2")
+      format("woff2");
+}

@@ -1,0 +1,38 @@
+@use "../styles/abstracts/z-index" as abs;
+
+*:has(.list) {
+  container: list-container / inline-size;
+}
+
+.list {
+  width: min(100%, 921px);
+  display: flex;
+  flex-direction: column;
+}
+.list > li {
+  container: column-container / inline-size;
+  --_border-radius: #{abs.to-rem(8px)};
+
+  &:first-child {
+    border-radius: var(--_border-radius) var(--_border-radius) 0 0;
+  }
+  &:last-child {
+    border-radius: 0 0 var(--_border-radius) var(--_border-radius);
+  }
+}
+
+@media screen and (min-width: #{abs.$bp-lg}) {
+  .list {
+    flex-direction: row;
+  }
+  .list > li {
+    flex: 1;
+
+    &:first-child {
+      border-radius: var(--_border-radius) 0 0 var(--_border-radius);
+    }
+    &:last-child {
+      border-radius: 0 var(--_border-radius) var(--_border-radius) 0;
+    }
+  }
+}

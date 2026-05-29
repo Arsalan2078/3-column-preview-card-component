@@ -1,0 +1,38 @@
+@use "../abstracts/z-index" as abs;
+
+:root {
+  // colors
+  --c-white: #ffffff;
+  --c-black: #000000;
+  --c-gray-100: #f2f2f2;
+  --c-green-950: #004140;
+  --c-green-500: #19b89d;
+  --c-cyan-800: #006971;
+  --c-cyan-500: #26b5c0;
+  --c-gold-500: #e28625;
+  --c-gold-200: #ffd473;
+
+  --color-bg-root: var(--c-gray-100);
+
+  // font-families
+  --ff-big-shoulders: "Big Shoulders", sans-serif;
+  --ff-lexend-deca: "Lexend Deca", sans-serif;
+
+  // font-weights
+  --fw-400: 400;
+  --fw-700: 700;
+
+  // font-sizes
+  --fs-40: #{abs.to-rem(40px)};
+  --fs-15: #{abs.to-rem(15px)};
+
+  // line-heights
+  --lh-120: 1.2;
+  --lh-165: 1.65;
+
+  // letter-spacings
+  --ls-0: 0;
+
+  // root styles
+  background-color: var(--color-bg-root);
+}

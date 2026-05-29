@@ -1,0 +1,6 @@
+@use "./functions";
+
+// breakpoints
+$bp-sm: functions.to-rem(384px);
+$bp-md: functions.to-rem(768px);
+$bp-lg: functions.to-rem(1440px);

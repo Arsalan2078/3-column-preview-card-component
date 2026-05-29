@@ -1,0 +1,26 @@
+---
+import css from "./CarClasses.module.scss";
+import { getCollection } from "astro:content";
+import CarClassColumn from "../components/CarClassColumn.astro";
+
+// ids go 3 - 2 - 1, to make myself implement this sort
+const carClasses = (await getCollection("carClasses")).sort(
+  (a, b) => b.data.id.valueOf() - a.data.id.valueOf(),
+);
+---
+
+<ul class={css.list}>
+  {
+    carClasses.map(({ data }) => (
+      <li>
+        <CarClassColumn
+          id={data.id}
+          heading={data.heading}
+          paragraph={data.paragraph}
+          link={data.link}
+          icon={data.icon}
+        />
+      </li>
+    ))
+  }
+</ul>
